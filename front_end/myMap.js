@@ -15,12 +15,12 @@ map_items = [
   {
     "pokemon_id":12,
     "expire":1234567,
-    "longtitute":-122.1703695,
-    "latitude":37.425713,
+    "longtitute":-122.4285031,
+    "latitude":37.4848542,
   }
 ]
 //2.Create pokemon image on map
-  //create layer
+  //create layer -122.1703695 37.425713
 function get_pokemon_layer_from_map_items(map_items){
 
   var layer = new Microsoft.Maps.Layer();
@@ -28,13 +28,14 @@ function get_pokemon_layer_from_map_items(map_items){
   var pushpins=[];
   for(var i in map_items){
     var map_item = map_items[i];
-    var pushpin = new Microsoft.Maps.Pushpin(map.getCenter(), { icon: 'https://www.bingmapsportal.com/Content/images/poi_custom.png',
-    anchor: new Microsoft.Maps.Point(12, 39) });
+    var pushpin = new Microsoft.Maps.Pushpin(
+                        new Microsoft.Maps.Location(map_item["latitude"],map_item["longtitute"]),
+                        { icon: 'https://www.bingmapsportal.com/Content/images/poi_custom.png'
+                              // anchor: new Microsoft.Maps.Point(12, 39)
+                             });
+    pushpins.push(pushpin);
 
   }
-  var pushpin = new Microsoft.Maps.Pushpin(map.getCenter(), { icon: 'https://www.bingmapsportal.com/Content/images/poi_custom.png',
-    anchor: new Microsoft.Maps.Point(12, 39) }
-  var pushpins = Microsoft.Maps.TestDataGenerator.getPushpins(10, map.getBounds());
   layer.add(pushpins);
   return layer;
 }
