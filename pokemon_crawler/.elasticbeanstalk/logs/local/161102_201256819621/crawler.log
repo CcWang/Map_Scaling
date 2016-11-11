@@ -1,0 +1,65 @@
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+I am in add_crawl_pointt
+Crawl result:[
+  {
+    "pokemon_id": 60, 
+    "expiration_timestamp_ms": 1478118098000, 
+    "longitude": -73.99806186274033, 
+    "latitude": 40.749514992569715, 
+    "spawn_point_id": "9926595145354969088", 
+    "encounter_id": 9926595146833087186
+  }, 
+  {
+    "pokemon_id": 65, 
+    "expiration_timestamp_ms": 1478117856000, 
+    "longitude": -74.00026550914085, 
+    "latitude": 40.748592297809786, 
+    "spawn_point_id": "9926595144147009536", 
+    "encounter_id": 9926595145625127392
+  }, 
+  {
+    "pokemon_id": 66, 
+    "expiration_timestamp_ms": 1478118192000, 
+    "longitude": -73.99953096315751, 
+    "latitude": 40.74848814085081, 
+    "spawn_point_id": "9926595144281227264", 
+    "encounter_id": 9926595145759345456
+  }, 
+  {
+    "pokemon_id": 489, 
+    "expiration_timestamp_ms": 1478118227000, 
+    "longitude": -73.99953096315751, 
+    "latitude": 40.749105735697114, 
+    "spawn_point_id": "9926595144415444992", 
+    "encounter_id": 9926595145893563219
+  }, 
+  {
+    "pokemon_id": 26, 
+    "expiration_timestamp_ms": 1478118011000, 
+    "longitude": -73.99953096315751, 
+    "latitude": 40.749105735697114, 
+    "spawn_point_id": "9926595144415444992", 
+    "encounter_id": 9926595145893563003
+  }, 
+  {
+    "pokemon_id": 143, 
+    "expiration_timestamp_ms": 1478118306000, 
+    "longitude": -74.00026550914085, 
+    "latitude": 40.748592297809786, 
+    "spawn_point_id": "9926595144147009536", 
+    "encounter_id": 9926595145625127842
+  }, 
+  {
+    "pokemon_id": 385, 
+    "expiration_timestamp_ms": 1478118194000, 
+    "longitude": -73.99806186274033, 
+    "latitude": 40.747662210045185, 
+    "spawn_point_id": "9926595143341703168", 
+    "encounter_id": 9926595144819821362
+  }
+]
+"POST /crawl_job/ HTTP/1.1" 200 6

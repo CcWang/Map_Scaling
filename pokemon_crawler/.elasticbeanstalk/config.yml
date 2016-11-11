@@ -1,0 +1,14 @@
+branch-defaults:
+  default:
+    environment: week2demo3-env
+environment-defaults:
+  week2demo3-env:
+    branch: null
+    repository: null
+global:
+  application_name: week2demo3
+  default_ec2_keyname: null
+  default_platform: 64bit Amazon Linux 2016.09 v2.2.0 running Docker 1.11.2
+  default_region: us-west-2
+  profile: null
+  sc: null

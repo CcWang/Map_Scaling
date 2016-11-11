@@ -1,0 +1,75 @@
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+I am in add_crawl_pointt
+Internal Server Error: /crawl_job
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/src/crawl_job/views.py", line 25, in add_crawl_point
+    request_obj = json.loads(request.body)
+  File "/usr/lib/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python2.7/json/decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+"GET /crawl_job HTTP/1.1" 500 70866
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'crawl_job.urls' from '/src/crawl_job/urls.pyc'> (None:None) crawl_job>"
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 1950
+I am in add_crawl_pointt
+Crawl result:[
+  {
+    "pokemon_id": 377, 
+    "expiration_timestamp_ms": 1478669990000, 
+    "longitude": -73.99806186274033, 
+    "latitude": 40.749514992569715, 
+    "spawn_point_id": "9926595145354969088", 
+    "encounter_id": 9926595146833639078
+  }, 
+  {
+    "pokemon_id": 331, 
+    "expiration_timestamp_ms": 1478670210000, 
+    "longitude": -73.99879641435722, 
+    "latitude": 40.74838397850929, 
+    "spawn_point_id": "9926595143610138624", 
+    "encounter_id": 9926595145088808834
+  }, 
+  {
+    "pokemon_id": 194, 
+    "expiration_timestamp_ms": 1478670086000, 
+    "longitude": -73.99953096315751, 
+    "latitude": 40.74848814085081, 
+    "spawn_point_id": "9926595144281227264", 
+    "encounter_id": 9926595145759897350
+  }, 
+  {
+    "pokemon_id": 78, 
+    "expiration_timestamp_ms": 1478669907000, 
+    "longitude": -74.00026550914085, 
+    "latitude": 40.747974696062506, 
+    "spawn_point_id": "9926595144012791808", 
+    "encounter_id": 9926595145491461715
+  }, 
+  {
+    "pokemon_id": 352, 
+    "expiration_timestamp_ms": 1478670013000, 
+    "longitude": -74.00026550914085, 
+    "latitude": 40.749209892991765, 
+    "spawn_point_id": "9926595144549662720", 
+    "encounter_id": 9926595146028332733
+  }
+]
+"POST /crawl_job/ HTTP/1.1" 200 6
